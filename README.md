@@ -1,7 +1,7 @@
 # II-BDCC-XML-TP
 
 
-<!ELEMENT biblio (a,b,c)
+```<!ELEMENT biblio (a,b,c)
 order is to be respected if elements are seperated with ","
 if elements are seperated with | then the order is not important 
 
@@ -27,3 +27,4 @@ presence can be :
     #REQUIRED
     #IMPLIED (optional )
     #FIXED
+```
