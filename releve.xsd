@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> 
+    <xsd:element name="releve" >
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="dateReleve" type="xsd:date"></xsd:element>
+                <xsd:element name="solde" type="xsd:int"></xsd:element>
+                <xsd:element name="operations" type="Ops"></xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="RIB" type="xsd:string" use="required"></xsd:attribute> 
+        </xsd:complexType>
+   
+    </xsd:element>
+    <xsd:complexType name="Ops">
+        <xsd:sequence>
+            <xsd:element name="operation" type="Op" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="dateDebut" type="xsd:date" use="required"></xsd:attribute>
+        <xsd:attribute name="dateFin" type="xsd:date" use="required"></xsd:attribute>
+    </xsd:complexType>
+    <xsd:complexType name="Op">
+        <xsd:attribute name="type" type="xsd:string" use="required"></xsd:attribute>
+        <xsd:attribute name="date" type="xsd:date" use="required"></xsd:attribute>
+        <xsd:attribute name="montant" type="xsd:int" use="required"></xsd:attribute>
+        <xsd:attribute name="description" type="xsd:string" use="required"></xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>
